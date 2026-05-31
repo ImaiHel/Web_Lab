@@ -2,13 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Лабораторная 3</title>
+    <title>Группа ПИз-221</title>
     <style>
+        /* Градиент сверху вниз на всю страницу */
+        html, body {
+            height: 100%;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 30px;
-            background: linear-gradient(135deg, #9FA1FF 0%, #B5BAFF 30%, #AEE2FF 70%, #D9F9DF 100%);
+            min-height: 100%;
+            /* Градиент сверху вниз с вашими цветами */
+            background: linear-gradient(to bottom, #9FA1FF 0%, #B5BAFF 30%, #AEE2FF 70%, #D9F9DF 100%);
         }
         
         h1 {
@@ -81,8 +88,8 @@
     <div class="links">
         <h2>Полезные ссылки</h2>
         <a href="https://kemsu.ru" target="_blank">Сайт КемГУ</a>
-        <a href="#">Расписание</a>
-        <a href="#">ЭИОС</a>
+        <a href="Расписание.pdf" target="_blank">Расписание</a>
+        <a href="https://eios.kemsu.ru" target="_blank">ЭИОС</a>
     </div>
 
 </body>

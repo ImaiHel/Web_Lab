@@ -3,8 +3,6 @@ console.log("=== Калькулятор любви ===");
 
 let firstName = prompt("Введите имя первого человека:");
 let secondName = prompt("Введите имя второго человека:");
-
-// Генерируем случайное число от 0 до 100
 let lovePercent = Math.floor(Math.random() * 101);
 
 alert(firstName + " подходит к " + secondName + " на " + lovePercent + " процентов!");
@@ -15,10 +13,8 @@ console.log("\n=== BMI Калькулятор ===");
 
 let weight = parseFloat(prompt("Введите ваш вес (в кг):"));
 let height = parseFloat(prompt("Введите ваш рост (в метрах):"));
-
 let bmi = weight / (height * height);
 console.log("Ваш BMI:", bmi.toFixed(2));
-
 let result;
 if (bmi <= 18.5) {
     result = "Недостаточный вес";
@@ -51,7 +47,6 @@ console.log("\n=== Кто оплачивает ужин? ===");
 
 let people = ['Дима', 'Катя', 'Петр', 'Лена'];
 console.log("Список:", people);
-
 let randomIndex = Math.floor(Math.random() * people.length);
 let payer = people[randomIndex];
 

@@ -3,38 +3,37 @@ let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 for (let i = 0; i < numberOfDrumButtons; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
         let buttonInnerHTML = this.innerHTML;
-        
+        let audio;
+
         switch (buttonInnerHTML) {
             case "w":
-                let tom1 = new Audio("Lab_9/sounds/tom-1.mp3");
-                tom1.play();
+                audio = new Audio("sounds/tom-1.mp3");
                 break;
             case "a":
-                let tom2 = new Audio("Lab_9/sounds/tom-2.mp3");
-                tom2.play();
+                audio = new Audio("sounds/tom-2.mp3");
                 break;
             case "s":
-                let tom3 = new Audio("Lab_9/sounds/tom-3.mp3");
-                tom3.play();
+                audio = new Audio("sounds/tom-3.mp3");
                 break;
             case "d":
-                let tom4 = new Audio("Lab_9/sounds/tom-4.mp3");
-                tom4.play();
+                audio = new Audio("sounds/tom-4.mp3");
                 break;
             case "j":
-                let snare = new Audio("Lab_9/sounds/snare.mp3");
-                snare.play();
+                audio = new Audio("sounds/snare.mp3");
                 break;
             case "k":
-                let crash = new Audio("Lab_9/sounds/crash.mp3");
-                crash.play();
+                audio = new Audio("sounds/crash.mp3");
                 break;
             case "l":
-                let kick = new Audio("Lab_9/sounds/kick-bass.mp3");
-                kick.play();
+                audio = new Audio("sounds/kick-bass.mp3");
                 break;
             default:
                 console.log(buttonInnerHTML);
+                return;
         }
+
+        audio.play().catch(function(error) {
+            console.log("Ошибка воспроизведения:", error);
+        });
     });
 }
